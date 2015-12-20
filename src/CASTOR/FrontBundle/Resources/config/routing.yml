@@ -1,0 +1,17 @@
+castor_front_homepage:
+    path:     /
+    defaults: { _controller: CASTORFrontBundle:Front:index }
+castor_front_homepage1:
+    path:     /index.html
+    defaults: { _controller: CASTORFrontBundle:Front:index }
+
+castor_front_presentation:
+    path:     /presentation.html
+    defaults: { _controller: CASTORFrontBundle:Front:presentation }
+
+castor_front_gallery:
+    path:     /gallery.html
+    defaults: { _controller: CASTORFrontBundle:Front:gallery }
+castor_front_contact:
+    path:     /contact.html
+    defaults: { _controller: CASTORFrontBundle:Front:contact }

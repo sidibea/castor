@@ -1,0 +1,41 @@
+castor_admin_homepage:
+    path:     /
+    defaults: { _controller: CASTORAdminBundle:Admin:index }
+castor_admin_parametrage:
+    path:     /parametrage
+    defaults: { _controller: CASTORAdminBundle:Admin:Param }
+castor_admin_classes:
+    path:     /classes
+    defaults: { _controller: CASTORAdminBundle:Admin:classes }
+castor_admin_add_classes:
+    path:     /add-classes
+    defaults: { _controller: CASTORAdminBundle:Admin:addClasses }
+castor_admin_edit_classes:
+    path:     /edit-classes/{id}
+    defaults: { _controller: CASTORAdminBundle:Admin:editClasses }
+
+castor_admin_inscription_eleves:
+    path:     /inscription-eleves
+    defaults: { _controller: CASTORAdminBundle:Student:register }
+
+castor_admin_list_matieres:
+    path:     /list-matieres
+    defaults: { _controller: CASTORAdminBundle:Matieres:list }
+castor_admin_add_matieres:
+    path:     /add-matieres
+    defaults: { _controller: CASTORAdminBundle:Matieres:add }
+castor_admin_edit_matieres:
+    path:     /edit-matieres/{id}
+    defaults: { _controller: CASTORAdminBundle:Matieres:edit }
+
+castor_admin_list_teachers:
+    path:     /list-teachers
+    defaults: { _controller: CASTORAdminBundle:Teachers:list }
+castor_admin_add_teachers:
+    path:     /add-teachers
+    defaults: { _controller: CASTORAdminBundle:Teachers:add }
+
+
+castor_admin_config_matieres:
+    path:     /config-matieres
+    defaults: { _controller: CASTORAdminBundle:Matieres:Config }

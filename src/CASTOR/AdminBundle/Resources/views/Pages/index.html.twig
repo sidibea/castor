@@ -1,0 +1,149 @@
+{# src/OC/PlatformBundle/Resources/views/Advert/index.html.twig #}
+
+{% extends "CASTORAdminBundle::layout.html.twig" %}
+
+{% block title %}
+    Tableau de Bord
+{% endblock %}
+
+{% block content %}
+
+    <section class="content-header">
+        <h1>
+            Tableau de Board
+            <small>Tableau de Bord</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Acceuil</a></li>
+            <li class="active">Tableau de Bord</li>
+        </ol>
+    </section>
+    <section class="content">
+
+
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-aqua"><i class="fa fa-users"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Total Eleves</span>
+                        <span class="info-box-number">487</span>
+                    </div><!-- /.info-box-content -->
+                </div><!-- /.info-box -->
+            </div><!-- /.col -->
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-red"><i class="fa fa-male"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Garcons</span>
+                        <span class="info-box-number">254</span>
+                    </div><!-- /.info-box-content -->
+                </div><!-- /.info-box -->
+            </div><!-- /.col -->
+
+            <!-- fix for small devices only -->
+            <div class="clearfix visible-sm-block"></div>
+
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-green"><i class="fa fa-female"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Filles</span>
+                        <span class="info-box-number">354</span>
+                    </div><!-- /.info-box-content -->
+                </div><!-- /.info-box -->
+            </div><!-- /.col -->
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-yellow"><i class="fa fa-calendar"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Moy. Absences </span>
+                        <span class="info-box-number">2,000</span>
+                    </div><!-- /.info-box-content -->
+                </div><!-- /.info-box -->
+            </div><!-- /.col -->
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box box-solid bg-light-blue-gradient">
+                    <div class="box-header">
+                        <h3 class="box-title">Recapitulation des Absences</h3>
+                    </div>
+                    <div class="box-body">
+                        <div class="chart" id="line-chart" style="position: relative; width: 100% ; height: 300px;"></div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box box-solid bg-green-gradient">
+                    <div class="box-header">
+                        <h3 class="box-title">10 Derniers SMS</h3>
+                    </div>
+                    <div class="box-body">
+                        <table class="table no-margin">
+
+                        </table>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block script %}
+    <script type="text/javascript">
+        "use strict";
+        $(function () {
+
+
+            //Make the dashboard widgets sortable Using jquery UI
+            $(".connectedSortable").sortable({
+                placeholder: "sort-highlight",
+                connectWith: ".connectedSortable",
+                handle: ".box-header, .nav-tabs",
+                forcePlaceholderSize: true,
+                zIndex: 999999
+            });
+            $(".connectedSortable .box-header, .connectedSortable .nav-tabs-custom").css("cursor", "move");
+
+            var area = new Morris.Area({
+                element: 'line-chart',
+                resize: true,
+                data: [
+                    {y: '2011 Q1', 10: 2666, 11: 2666},
+                    {y: '2011 Q2', 10: 2778, 11: 2294},
+                    {y: '2011 Q3', 10: 4912, 11: 1969},
+                    {y: '2011 Q4', 10: 3767, 11: 3597},
+                    {y: '2012 Q1', 10: 6810, 11: 1914},
+                    {y: '2012 Q2', 10: 5670, 11: 4293},
+                    {y: '2012 Q3', 10: 4820, 11: 3795},
+                    {y: '2012 Q4', 10: 15073, 11: 5967},
+                    {y: '2013 Q1', 10: 10687, 11: 4460},
+                    {y: '2013 Q2', 10: 8432, 11: 5713}
+                ],
+                xkey: 'y',
+                ykeys: ['10 ', '11'],
+                labels: ['10eme Annee', '11eme Annee'],
+                lineColors: ['#a0d0e0', '#3c8dbc'],
+                hideHover: 'auto'
+            });
+
+
+
+
+
+
+
+        });
+    </script>
+
+
+{% endblock %}

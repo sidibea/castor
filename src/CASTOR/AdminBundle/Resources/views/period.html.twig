@@ -1,0 +1,123 @@
+{% extends "CASTORAdminBundle::layout.html.twig" %}
+
+{% block title %}
+    Parametrage
+{% endblock %}
+
+{% block content %}
+
+<section class="content-header">
+    <h1>
+        Gestion
+        <small>Parametrage</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Acceuil</a></li>
+        <li class="active">Gestion</li>
+    </ol>
+</section>
+<section class="content">
+    <div class="row">
+        <section class="col-lg-12">
+            <div class="box solid">
+                <div class="box-header">
+                    <h3 class="title">Définition des périodes trimestrielles ou semestrielles</h3>
+                </div>
+                <div class="box-body">
+                    <table id="classes" class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                            <th>Trimestre </th>
+                            <th>Date Debut</th>
+                            <th>Date Fin</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {{ form_start(trimestre) }}
+
+                        {# Les erreurs générales du formulaire. #}
+                        {{ form_errors(trimestre) }}
+                         <tr>
+                             <td width="30%">Premier</td>
+                             <td>
+                                 <div class="col-xs-6">
+                                     <div class="form-group">
+                                         {# Affichage des erreurs pour ce champ précis. #}
+                                         {{ form_errors(trimestre.dateDebut) }}
+                                         <div class="input-group">
+                                             <div class="input-group-addon">
+                                                 <i class="fa fa-calendar"></i>
+                                             </div>
+                                             {# Génération de l'input. #}
+                                             {{ form_widget(trimestre.dateDebut, {'attr': {'class': 'form-control', 'placeholder' : ' ' }}) }}
+                                         </div>
+                                     </div>
+                                 </div>
+                             </td>
+                             <td>
+                                 <div class="col-xs-6">
+
+                                 <div class="form-group">
+                                     {# Affichage des erreurs pour ce champ précis. #}
+                                     {{ form_errors(trimestre.dateFin) }}
+                                     <div class="input-group">
+                                         <div class="input-group-addon">
+                                             <i class="fa fa-calendar"></i>
+                                         </div>
+                                         {# Génération de l'input. #}
+                                         {{ form_widget(trimestre.dateFin, {'attr': {'class': 'form-control', 'placeholder' : ' ' }}) }}
+                                     </div>
+                                 </div>
+                                     </div>
+                             </td>
+
+                         </tr>
+                        {# Génération automatique des champs pas encore écrits.
+                           Dans cet exemple, ce serait le champ CSRF (géré automatiquement par Symfony !)
+                           et tous les champs cachés (type « hidden »). #}
+                        {{ form_rest(trimestre) }}
+
+                        {# Fermeture de la balise <form> du formulaire HTML #}
+                        {{ form_end(trimestre) }}
+
+
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-primary">Valider</button>
+                    </div>
+
+                </div>
+        </section>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block script %}
+    <script type="text/javascript">
+        $(function () {
+
+            //Activate the iCheck Plugin
+            $('input[type="radio"]').iCheck({
+                checkboxClass: 'icheckbox_flat-blue',
+                radioClass: 'iradio_flat-blue'
+            });
+
+            $('#classes').dataTable({
+                "bPaginate": false,
+                "bLengthChange": true,
+                "bFilter": false,
+                "bSort": false,
+                "bInfo": false,
+                "bAutoWidth": false
+            });
+
+
+        });
+    </script>
+{% endblock %}

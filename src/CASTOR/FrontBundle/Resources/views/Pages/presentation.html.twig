@@ -1,0 +1,291 @@
+{% extends "CASTORFrontBundle::layout.html.twig" %}
+
+{% block title %}
+   Presentation
+{% endblock %}
+
+{% block content %}
+
+    <div class="clearfix"></div>
+    <div class="page_title">
+        <div class="container">
+
+            <h1> <strong>Presentation</strong></h1>
+            Many web sites infancy
+
+        </div>
+    </div><!-- end page title -->
+
+    <div class="clearfix"></div>
+
+    <div class="fuicsec">
+        <div class="container">
+
+            <div class="one_fifth">
+
+                <i class="fa fa-paper-plane"></i> <h3>95% <br /> BAC</h3>
+
+            </div><!-- end section -->
+
+            <div class="one_fifth">
+
+                <i class="fa fa-users"></i> <h3>759 <br /> Eleves</h3>
+
+            </div><!-- end section -->
+
+            <div class="one_fifth">
+
+                <i class="fa fa-trophy"></i> <h3>98% <br /> Honneur </h3>
+
+            </div><!-- end section -->
+
+            <div class="one_fifth">
+
+                <i class="fa fa-bar-chart-o"></i> <h3>54475 <br /> % Au BAC</h3>
+
+            </div><!-- end section -->
+
+            <div class="one_fifth last">
+
+                <i class="fa fa-life-ring"></i> <h3>365 <br /> Days</h3>
+
+            </div><!-- end section -->
+
+        </div>
+    </div>
+
+    <div class="clearfix margin_top2"></div>
+
+    <div class="content_fullwidth">
+        <div class="container">
+
+            <div class="two_third">
+
+                <img  src="{{ asset('front/images/site-img15.png') }}" width="350" height="250" alt="" class="img_left11" />
+
+                <h4>Mots du <strong>Directeur</strong></h4>
+
+                <p>Etiam dictum. Nunc enim. Sed massa tellus, aliquam rhoncus, venenatis quis, suscipit ac, libero. Praesent odio tellus, posuere sed, dictum sed, fermentum at, orci. Aenean arcu tortor, suscipit vitae, hendrerit condimentum, dapibus ac, nulla. Curabitur tempor.
+                    <br /><br />
+                    Donec dapibus placerat ipsum. Nulla facilisi. Aliquam ut leo quis nunc adipiscing faucibus. Mauris non quam ac eros rutrum fringilla. Quisque ut turpis. Etiam dictum. Nunc enim. Sed massa tellus, aliquam rhoncus, venenatis quis, suscipit ac, libero. Praesent odio tellus, venenatis quis suscipit ac, libero suscipit ac, libero posuere sed, dictum ante ipsum primis suscipit in faucibus orci luctus. Cum sociis natoque penatibus et magnis dis parturient.
+                    <br /><br />
+                    Montes ascetur ridiculus mus Fusce feugiat malesuada odio. Morbi nun c odio gravida at cursus nec luctus a lorem. Lorem ip sum dolor sit amet, consectetur adipiscing elit. Sed ut purus tellus. Suspendisse mollin.</p>
+
+            </div><!-- end section -->
+
+            <div class="one_third last">
+
+                <div class="biobox">
+
+                    <h4><strong>Camp d'excellence</strong></h4>
+
+                    <i class="fa fa-trophy"></i>
+
+                    <p>Suscipit ac nunc at semper elementum nulla. Etiam non rutrum a viverra turpis massa commodo aliquam massa.</p>
+
+                    <br />
+
+                    <i class="fa fa-trophy"></i>
+
+                    <p>Nuscipit ac nunc at semper elementum nulla. Etiam non rutrum a viverra turpis massa commodo aliquam massa.</p>
+
+                    <br />
+
+                    <i class="fa fa-trophy"></i>
+
+                    <p>Puscipit ac nunc at semper elementum nulla. Etiam non rutrum a viverra turpis massa commodo aliquam massa.</p>
+
+                    <br />
+
+                    <i class="fa fa-trophy"></i>
+
+                    <p>Ruscipit ac nunc at semper elementum nulla. Etiam non rutrum a viverra turpis massa commodo aliquam massa.</p>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="clearfix margin_top7"></div>
+
+    <div class="features_sec45">
+        <div class="container animate" data-anim-type="fadeIn" data-anim-delay="300">
+
+            <h3><strong>Pourcentages au BAC</strong></h3>
+
+            <div class="cirdiv"><canvas class="loader"></canvas> <br /> 2015 </div>
+            <div class="cirdiv"><canvas class="loader2"></canvas> <br /> 2014 </div>
+            <div class="cirdiv"><canvas class="loader3"></canvas> <br /> 2013 </div>
+            <div class="cirdiv"><canvas class="loader4"></canvas> <br /> 2012 </div>
+
+            <script>
+                (function($) {
+                    "use strict";
+
+                    $(document).ready(function() {
+                        $('.loader').ClassyLoader({
+                            percentage: 90,
+                            speed: 30,
+                            fontSize: '50px',
+                            diameter: 90,
+                            lineColor: 'rgba(19,175,235,1)',
+                            remainingLineColor: 'rgba(200,200,200,0.4)',
+                            lineWidth: 9
+                        });
+                    });
+
+                    $(document).ready(function() {
+                        $('.loader2').ClassyLoader({
+                            percentage: 100,
+                            speed: 30,
+                            fontSize: '50px',
+                            diameter: 90,
+                            lineColor: 'rgba(63,195,95,1)',
+                            remainingLineColor: 'rgba(200,200,200,0.4)',
+                            lineWidth: 9
+                        });
+                    });
+
+                    $(document).ready(function() {
+                        $('.loader3').ClassyLoader({
+                            percentage: 85,
+                            speed: 30,
+                            fontSize: '50px',
+                            diameter: 90,
+                            lineColor: 'rgba(252,66,66,1)',
+                            remainingLineColor: 'rgba(200,200,200,0.4)',
+                            lineWidth: 9
+                        });
+                    });
+
+                    $(document).ready(function() {
+                        $('.loader4').ClassyLoader({
+                            percentage: 65,
+                            speed: 30,
+                            fontSize: '50px',
+                            diameter: 90,
+                            lineColor: 'rgba(47,146,238,1)',
+                            remainingLineColor: 'rgba(200,200,200,0.4)',
+                            lineWidth: 9
+                        });
+                    });
+
+                    $(document).ready(function() {
+                        $('.loader5').ClassyLoader({
+                            percentage: 95,
+                            speed: 30,
+                            fontSize: '50px',
+                            diameter: 90,
+                            lineColor: 'rgba(199,98,203,1)',
+                            remainingLineColor: 'rgba(200,200,200,0.4)',
+                            lineWidth: 9
+                        });
+                    });
+
+
+                })(jQuery);
+            </script>
+
+
+        </div>
+    </div><!-- end features section45 -->
+
+    <div class="clearfix"></div>
+
+    <div class="features_sec42 two three">
+        <div class="container">
+
+            <h3>Notre <strong>Equipe</strong></h3>
+            <br>
+
+            <div class="one_fourth animate fadeInUp" data-anim-type="fadeInUp">
+                <div class="box">
+
+                    <img src="{{ asset('front/images/site-img15.png') }}" width="240" height="245" alt="">
+
+                    <h4>John Frances</h4>
+                    <h6 class="nocaps">CEO</h6>
+
+                    <p>Lorem ipsum dolor amet, consectetue Radipiscing elit et Suspendisse et justo. mattis commodo augue. Aliquam ornare hendrerit augue cars.</p>
+                    <br>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                    </ul>
+
+                </div>
+            </div><!-- end section -->
+
+            <div class="one_fourth animate fadeInUp" data-anim-type="fadeInUp" data-anim-delay="200">
+                <div class="box">
+
+                    <img src="{{ asset('front/images/site-img15.png') }}" width="240" height="245" alt="">
+
+                    <h4>Lucia Penelope</h4>
+                    <h6 class="nocaps">Manager</h6>
+
+                    <p>Lorem ipsum dolor amet, consectetue Radipiscing elit et Suspendisse et justo. mattis commodo augue. Aliquam ornare hendrerit augue cars.</p>
+                    <br>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                    </ul>
+
+                </div>
+            </div><!-- end section -->
+
+            <div class="one_fourth animate fadeInUp" data-anim-type="fadeInUp" data-anim-delay="400">
+                <div class="box">
+
+                    <img src="{{ asset('front/images/site-img15.png') }}" width="240" height="245" alt="">
+
+                    <h4>Mark Adraison</h4>
+                    <h6 class="nocaps">Marketing</h6>
+
+                    <p>Lorem ipsum dolor amet, consectetue Radipiscing elit et Suspendisse et justo. mattis commodo augue. Aliquam ornare hendrerit augue cars.</p>
+                    <br>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                    </ul>
+
+                </div>
+            </div><!-- end section -->
+
+            <div class="one_fourth last animate fadeInUp" data-anim-type="fadeInUp" data-anim-delay="600">
+                <div class="box">
+
+                    <img src="{{ asset('front/images/site-img15.png') }}" width="240" height="245" alt="">
+
+
+                    <h4>Anya Siennadia</h4>
+                    <h6 class="nocaps">Support</h6>
+
+                    <p>Lorem ipsum dolor amet, consectetue Radipiscing elit et Suspendisse et justo. mattis commodo augue. Aliquam ornare hendrerit augue cars.</p>
+                    <br>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                    </ul>
+
+                </div>
+            </div><!-- end section -->
+
+        </div>
+    </div>
+    <!-- end content area -->
+
+    <div class="clearfix margin_top5"></div>
+
+{% endblock %}

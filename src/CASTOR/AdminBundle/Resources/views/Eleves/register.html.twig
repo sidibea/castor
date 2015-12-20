@@ -1,0 +1,374 @@
+{% extends "CASTORAdminBundle::layout.html.twig" %}
+
+{% block title %}
+    Classes
+{% endblock %}
+
+{% block content %}
+
+<section class="content-header">
+    <h1>
+        Gestion
+        <small>Ajouter un eleve</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Acceuil</a></li>
+        <li class="active">Eleve</li>
+    </ol>
+</section>
+<section class="content">
+    <div class="row">
+    <section class="col-lg-12">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">Formulaire d'inscription</h3>
+
+            </div><!-- /.box-header -->
+            {{ form_start(form) }}
+
+            {# Les erreurs générales du formulaire. #}
+            {{ form_errors(form) }}
+            <div class="box-body">
+
+
+
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        {{ form_label(form.nom, "Nom ") }}
+
+                        {# Affichage des erreurs pour ce champ précis. #}
+                        {{ form_errors(form.nom) }}
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            {# Génération de l'input. #}
+                            {{ form_widget(form.nom, {'attr': {'class': 'form-control', 'placeholder' : 'Entrez le nom du directeur' }}) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        {{ form_label(form.prenom, "Prenom ") }}
+
+                        {# Affichage des erreurs pour ce champ précis. #}
+                        {{ form_errors(form.prenom) }}
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            {# Génération de l'input. #}
+                            {{ form_widget(form.prenom, {'attr': {'class': 'form-control', 'placeholder' : 'Entrez le nom du directeur' }}) }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        {{ form_label(form.sexe, "Sexe ") }}
+
+                        {# Affichage des erreurs pour ce champ précis. #}
+                        {{ form_errors(form.sexe) }}
+
+                        {# Génération de l'input. #}
+                        {{ form_widget(form.sexe, {'attr': {'class': 'form-control', 'placeholder' : 'Entrez le nom du directeur' }}) }}
+                    </div>
+                </div>
+
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        {{ form_label(form.dob, "Date de naissance ") }}
+
+                        {# Affichage des erreurs pour ce champ précis. #}
+                        {{ form_errors(form.dob) }}
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            {# Génération de l'input. #}
+                            {{ form_widget(form.dob, {'attr': {'class': 'form-control datepicker', 'placeholder' : 'Entrez le nom du directeur' }}) }}
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        {{ form_label(form.lieuNaissance, "Lieu de naissance ") }}
+
+                        {# Affichage des erreurs pour ce champ précis. #}
+                        {{ form_errors(form.lieuNaissance) }}
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            {# Génération de l'input. #}
+                            {{ form_widget(form.lieuNaissance, {'attr': {'class': 'form-control ', 'placeholder' : 'Entrez le nom du directeur' }}) }}
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        {{ form_label(form.nationalite, "Nationalite ") }}
+
+                        {# Affichage des erreurs pour ce champ précis. #}
+                        {{ form_errors(form.nationalite) }}
+
+                        {# Génération de l'input. #}
+                        {{ form_widget(form.nationalite, {'attr': {'class': 'form-control', 'placeholder' : 'Entrez le nom du directeur' }}) }}
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        {{ form_label(form.classe, "Classe ") }}
+
+                        {# Affichage des erreurs pour ce champ précis. #}
+                        {{ form_errors(form.classe) }}
+
+                        {# Génération de l'input. #}
+                        {{ form_widget(form.classe, {'attr': {'class': 'form-control', 'placeholder' : 'Entrez le nom du directeur' }}) }}
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        {{ form_label(form.etatSanitaire, "Etat Sanitaire ") }}
+
+                        {# Affichage des erreurs pour ce champ précis. #}
+                        {{ form_errors(form.etatSanitaire) }}
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            {# Génération de l'input. #}
+                            {{ form_widget(form.etatSanitaire, {'attr': {'class': 'form-control ', 'placeholder' : 'Entrez le nom du directeur' }}) }}
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        {{ form_label(form.etablissementOrigine, "Etablissement d'origine ") }}
+
+                        {# Affichage des erreurs pour ce champ précis. #}
+                        {{ form_errors(form.etablissementOrigine) }}
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            {# Génération de l'input. #}
+                            {{ form_widget(form.etablissementOrigine, {'attr': {'class': 'form-control ', 'placeholder' : 'Entrez le nom du directeur' }}) }}
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        {{ form_label(form.langueVivante, "Langue Vivante ") }}
+
+                        {# Affichage des erreurs pour ce champ précis. #}
+                        {{ form_errors(form.langueVivante) }}
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            {# Génération de l'input. #}
+                            {{ form_widget(form.langueVivante, {'attr': {'class': 'form-control ', 'placeholder' : 'Entrez le nom du directeur' }}) }}
+
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="form-group">
+                        {{ form_label(form.tel, "Mobile ") }}
+
+                        {# Affichage des erreurs pour ce champ précis. #}
+                        {{ form_errors(form.tel) }}
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            {# Génération de l'input. #}
+                            {{ form_widget(form.tel, {'attr': {'class': 'form-control ', 'placeholder' : 'Entrez le nom du directeur' }}) }}
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        {{ form_label(form.nomPere, "Profession Pere ") }}
+
+                        {# Affichage des erreurs pour ce champ précis. #}
+                        {{ form_errors(form.nomPere) }}
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            {# Génération de l'input. #}
+                            {{ form_widget(form.nomPere, {'attr': {'class': 'form-control ', 'placeholder' : 'Entrez le nom du directeur' }}) }}
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        {{ form_label(form.professionPere, "Profession Pere ") }}
+
+                        {# Affichage des erreurs pour ce champ précis. #}
+                        {{ form_errors(form.professionPere) }}
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            {# Génération de l'input. #}
+                            {{ form_widget(form.professionPere, {'attr': {'class': 'form-control ', 'placeholder' : 'Entrez le nom du directeur' }}) }}
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        {{ form_label(form.telPere, "Mobile Pere ") }}
+
+                        {# Affichage des erreurs pour ce champ précis. #}
+                        {{ form_errors(form.telPere) }}
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            {# Génération de l'input. #}
+                            {{ form_widget(form.telPere, {'attr': {'class': 'form-control ', 'placeholder' : 'Entrez le nom du directeur' }}) }}
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        {{ form_label(form.emailPere, "Email Pere ") }}
+
+                        {# Affichage des erreurs pour ce champ précis. #}
+                        {{ form_errors(form.emailPere) }}
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            {# Génération de l'input. #}
+                            {{ form_widget(form.emailPere, {'attr': {'class': 'form-control ', 'placeholder' : 'Entrez le nom du directeur' }}) }}
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        {{ form_label(form.nomMere, "Profession Mere ") }}
+
+                        {# Affichage des erreurs pour ce champ précis. #}
+                        {{ form_errors(form.nomMere) }}
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            {# Génération de l'input. #}
+                            {{ form_widget(form.nomMere, {'attr': {'class': 'form-control ', 'placeholder' : 'Entrez le nom du directeur' }}) }}
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        {{ form_label(form.professionMere, "Profession Mere ") }}
+
+                        {# Affichage des erreurs pour ce champ précis. #}
+                        {{ form_errors(form.professionMere) }}
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            {# Génération de l'input. #}
+                            {{ form_widget(form.professionMere, {'attr': {'class': 'form-control ', 'placeholder' : 'Entrez le nom du directeur' }}) }}
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        {{ form_label(form.telMere, "Mobile Mere ") }}
+
+                        {# Affichage des erreurs pour ce champ précis. #}
+                        {{ form_errors(form.telMere) }}
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            {# Génération de l'input. #}
+                            {{ form_widget(form.telMere, {'attr': {'class': 'form-control ', 'placeholder' : 'Entrez le nom du directeur' }}) }}
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        {{ form_label(form.emailMere, "Email Mere ") }}
+
+                        {# Affichage des erreurs pour ce champ précis. #}
+                        {{ form_errors(form.emailMere) }}
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            {# Génération de l'input. #}
+                            {{ form_widget(form.emailMere, {'attr': {'class': 'form-control ', 'placeholder' : 'Entrez le nom du directeur' }}) }}
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        {{ form_label(form.adresse, "Adresse ") }}
+
+                        {# Affichage des erreurs pour ce champ précis. #}
+                        {{ form_errors(form.adresse) }}
+
+                            {# Génération de l'input. #}
+                            {{ form_widget(form.adresse, {'attr': {'class': 'form-control ', 'placeholder' : 'Entrez le nom du directeur' }}) }}
+
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Valider</button>
+
+
+            </div>
+            {# Génération automatique des champs pas encore écrits.
+                              Dans cet exemple, ce serait le champ CSRF (géré automatiquement par Symfony !)
+                              et tous les champs cachés (type « hidden »). #}
+            {{ form_rest(form) }}
+
+            {# Fermeture de la balise <form> du formulaire HTML #}
+            {{ form_end(form) }}
+        </div>
+    </section>
+
+     </div>
+</section>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript">
+    $(function () {
+        var dateToday = new Date();
+        $(".datepicker").datepicker({
+            minDate:0,
+            format: 'yyyy-mm-dd'
+        });
+        });
+</script>
+{% endblock %}

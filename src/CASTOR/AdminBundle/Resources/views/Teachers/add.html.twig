@@ -1,0 +1,319 @@
+{% extends "CASTORAdminBundle::layout.html.twig" %}
+
+{% block title %}
+    Classes
+{% endblock %}
+
+{% block content %}
+
+<section class="content-header">
+    <h1>
+        Classes
+        <small>Ajouter une classe</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Acceuil</a></li>
+        <li class="active">Classe</li>
+    </ol>
+</section>
+<section class="content">
+    <div class="row">
+        <section class="col-lg-12">
+            <div class="box box-solid">
+                <div class="box-header">
+                    <h3 class="box-title">Nouvelle Classe</h3>
+                </div>
+                {{ form_start(form) }}
+
+                {# Les erreurs générales du formulaire. #}
+                {{ form_errors(form) }}
+                <div class="box-body">
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            {{ form_label(form.nom, "Nom ") }}
+
+                            {# Affichage des erreurs pour ce champ précis. #}
+                            {{ form_errors(form.nom) }}
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-user"></i>
+                                </div>
+                                {# Génération de l'input. #}
+                                {{ form_widget(form.nom, {'attr': {'class': 'form-control', 'placeholder' : 'Entrez le nom de l\'enseignant' }}) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            {{ form_label(form.prenom, "Prenom ") }}
+
+                            {# Affichage des erreurs pour ce champ précis. #}
+                            {{ form_errors(form.prenom) }}
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-user"></i>
+                                </div>
+                                {# Génération de l'input. #}
+                                {{ form_widget(form.prenom, {'attr': {'class': 'form-control', 'placeholder' : 'Entrez le prenom de l\'enseignant' }}) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            {{ form_label(form.sexe, "Sexe ") }}
+
+                            {# Affichage des erreurs pour ce champ précis. #}
+                            {{ form_errors(form.sexe) }}
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-user"></i>
+                                </div>
+                                {# Génération de l'input. #}
+                                {{ form_widget(form.sexe, {'attr': {'class': 'form-control ', 'placeholder' : 'Entrez le prenom de l\'enseignant' }}) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            {{ form_label(form.dob, "Date de Naissane ") }}
+
+                            {# Affichage des erreurs pour ce champ précis. #}
+                            {{ form_errors(form.dob) }}
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-user"></i>
+                                </div>
+                                {# Génération de l'input. #}
+                                {{ form_widget(form.dob, {'attr': {'class': 'form-control datepicker', 'placeholder' : 'Entrez le prenom de l\'enseignant' }}) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            {{ form_label(form.lieuNaissance, "Lieu de Naissane ") }}
+
+                            {# Affichage des erreurs pour ce champ précis. #}
+                            {{ form_errors(form.lieuNaissance) }}
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-user"></i>
+                                </div>
+                                {# Génération de l'input. #}
+                                {{ form_widget(form.lieuNaissance, {'attr': {'class': 'form-control ', 'placeholder' : 'Entrez le prenom de l\'enseignant' }}) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            {{ form_label(form.ville, "Ville ") }}
+
+                            {# Affichage des erreurs pour ce champ précis. #}
+                            {{ form_errors(form.ville) }}
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-user"></i>
+                                </div>
+                                {# Génération de l'input. #}
+                                {{ form_widget(form.ville, {'attr': {'class': 'form-control ', 'placeholder' : 'Entrez le prenom de l\'enseignant' }}) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            {{ form_label(form.qualite, "Qualite ") }}
+
+                            {# Affichage des erreurs pour ce champ précis. #}
+                            {{ form_errors(form.qualite) }}
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-user"></i>
+                                </div>
+                                {# Génération de l'input. #}
+                                {{ form_widget(form.qualite, {'attr': {'class': 'form-control ', 'placeholder' : 'Entrez le prenom de l\'enseignant' }}) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            {{ form_label(form.diplome, "Diplome ") }}
+
+                            {# Affichage des erreurs pour ce champ précis. #}
+                            {{ form_errors(form.diplome) }}
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-user"></i>
+                                </div>
+                                {# Génération de l'input. #}
+                                {{ form_widget(form.diplome, {'attr': {'class': 'form-control ', 'placeholder' : 'Entrez le prenom de l\'enseignant' }}) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" ">
+                        <div class="form-group">
+                            {{ form_label(form.adresse, "Adresse ") }}
+
+                            {# Affichage des erreurs pour ce champ précis. #}
+                            {{ form_errors(form.adresse) }}
+
+
+                                {# Génération de l'input. #}
+                                {{ form_widget(form.adresse, {'attr': {'class': 'form-control ', 'placeholder' : 'Entrez le prenom de l\'enseignant' }}) }}
+                        </div>
+                    </div>
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                {{ form_label(form.codePostal, "Code Postal ") }}
+
+                                {# Affichage des erreurs pour ce champ précis. #}
+                                {{ form_errors(form.codePostal) }}
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                    {# Génération de l'input. #}
+                                    {{ form_widget(form.codePostal, {'attr': {'class': 'form-control ', 'placeholder' : 'Entrez le prenom de l\'enseignant' }}) }}
+                                </div>
+                            </div>
+                        </div>
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            {{ form_label(form.telephone, "Telephone ") }}
+
+                            {# Affichage des erreurs pour ce champ précis. #}
+                            {{ form_errors(form.telephone) }}
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-user"></i>
+                                </div>
+                                {# Génération de l'input. #}
+                                {{ form_widget(form.telephone, {'attr': {'class': 'form-control ', 'placeholder' : 'Entrez le prenom de l\'enseignant' }}) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="form-group">
+                            {{ form_label(form.email, "Email ") }}
+
+                            {# Affichage des erreurs pour ce champ précis. #}
+                            {{ form_errors(form.email) }}
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-enveloppe"></i>
+                                </div>
+                                {# Génération de l'input. #}
+                                {{ form_widget(form.email, {'attr': {'class': 'form-control ', 'placeholder' : 'Entrez le prenom de l\'enseignant' }}) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" ">
+                        <div class="form-group">
+                            {{ form_label(form.matieres, "Matieres ") }}
+
+                            {# Affichage des erreurs pour ce champ précis. #}
+                            {{ form_errors(form.matieres) }}
+
+
+                            {# Génération de l'input. #}
+                            {{ form_widget(form.matieres, {'attr': {'class': 'form-control ', 'placeholder' : 'Entrez le prenom de l\'enseignant' }}) }}
+                        </div>
+                    </div>
+
+                </div>
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">Valider</button>
+                </div>
+
+
+                {# Génération automatique des champs pas encore écrits.
+                              Dans cet exemple, ce serait le champ CSRF (géré automatiquement par Symfony !)
+                              et tous les champs cachés (type « hidden »). #}
+                {{ form_rest(form) }}
+
+                {# Fermeture de la balise <form> du formulaire HTML #}
+                {{ form_end(form) }}
+            </div>
+        </section>
+    </div>
+</section>
+{% endblock %}
+
+    {% block script %}
+        <script type="text/javascript">
+            $(function () {
+
+                //Activate the iCheck Plugin
+                $('input[type="radio"]').iCheck({
+                    checkboxClass: 'icheckbox_flat-blue',
+                    radioClass: 'iradio_flat-blue'
+                });
+                // On récupère la balise <div> en question qui contient l'attribut « data-prototype » qui nous intéresse.
+                var $container = $('div#castor_adminbundle_classes_dateTrimestriel');
+
+                // On ajoute un lien pour ajouter une nouvelle catégorie
+                var $addLink = $('<a href="#" id="add_category"  class="btn btn-default">Ajouter une nouvelle periode</a>');
+                $container.append($addLink);
+
+                // On ajoute un nouveau champ à chaque clic sur le lien d'ajout.
+                $addLink.click(function(e) {
+                    addCategory($container);
+                    e.preventDefault(); // évite qu'un # apparaisse dans l'URL
+                    return false;
+                });
+
+                // On définit un compteur unique pour nommer les champs qu'on va ajouter dynamiquement
+                var index = $container.find(':input').length;
+
+                // On ajoute un premier champ automatiquement s'il n'en existe pas déjà un (cas d'une nouvelle annonce par exemple).
+                if (index == 0) {
+                    addCategory($container);
+                } else {
+                    // Pour chaque catégorie déjà existante, on ajoute un lien de suppression
+                    $container.children('div').each(function() {
+                        addDeleteLink($(this));
+                    });
+                }
+
+                // La fonction qui ajoute un formulaire Categorie
+                function addCategory($container) {
+                    // Dans le contenu de l'attribut « data-prototype », on remplace :
+                    // - le texte "__name__label__" qu'il contient par le label du champ
+                    // - le texte "__name__" qu'il contient par le numéro du champ
+                    var $prototype = $($container.attr('data-prototype').replace(/__name__label__/g, 'Periode n°' + (index+1))
+                            .replace(/__name__/g, index));
+
+                    // On ajoute au prototype un lien pour pouvoir supprimer la catégorie
+                    addDeleteLink($prototype);
+
+                    // On ajoute le prototype modifié à la fin de la balise <div>
+                    $container.append($prototype);
+
+                    // Enfin, on incrémente le compteur pour que le prochain ajout se fasse avec un autre numéro
+                    index++;
+                }
+
+                // La fonction qui ajoute un lien de suppression d'une catégorie
+                function addDeleteLink($prototype) {
+                    // Création du lien
+                    $deleteLink = $('<br><a href="#" class="btn btn-danger">Supprimer</a>');
+
+                    // Ajout du lien
+                    $prototype.append($deleteLink);
+
+                    // Ajout du listener sur le clic du lien
+                    $deleteLink.click(function(e) {
+                        $prototype.remove();
+                        e.preventDefault(); // évite qu'un # apparaisse dans l'URL
+                        return false;
+                    });
+                }
+
+                var dateToday = new Date();
+                $(".datepicker").datepicker({
+                    minDate:0,
+                    format: 'yyyy-mm-dd'
+                });
+
+
+            });
+        </script>
+    {% endblock %}

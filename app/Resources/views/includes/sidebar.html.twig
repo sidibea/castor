@@ -1,0 +1,98 @@
+<!-- sidebar: style can be found in sidebar.less -->
+<section class="sidebar">
+    <!-- Sidebar user panel -->
+    <div class="user-panel">
+        <div class="pull-left image">
+            <img src="{{ asset('admin/images/logo.jpg') }}" class="img-circle" alt="User Image" />
+        </div>
+        <div class="pull-left info">
+            <p>{ user.email }</p>
+
+            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+    </div>
+
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="sidebar-menu">
+        <li class="header">MENU PRINCIPALE</li>
+
+            <li class="treeview">
+                <a href="">
+                    <i class="fa fa-dashboard"></i> <span>TABLEAU DE BORD</span>
+                </a>
+            </li>
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-book"></i>
+                <span>GESTION</span>
+                <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+                <li><a href="{{ path('castor_admin_parametrage') }}"><i class="fa fa-circle-o"></i> Parametrage</a> </li>
+                <li><a href=""><i class="fa fa-circle-o"></i> Definir les Periodes T.</a></li>
+                <li><a href="{{ path('castor_admin_inscription_eleves') }}"><i class="fa fa-circle-o"></i> Eleves</a></li>
+                <li><a href="{{ path('castor_admin_list_teachers') }}"><i class="fa fa-circle-o"></i> Enseignants</a></li>
+                <li><a href=""><i class="fa fa-circle-o"></i> Classes</a></li>
+                <li><a href="{{ path('castor_admin_list_matieres') }}"><i class="fa fa-circle-o"></i> Matieres</a></li>
+                <li><a href=""><i class="fa fa-circle-o"></i> Reglements Internes</a></li>
+                <li><a href=""><i class="fa fa-circle-o"></i> Pre-Inscriptions</a></li>
+                <li><a href=""><i class="fa fa-circle-o"></i> SMS</a></li>
+
+
+
+
+
+            </ul>
+        </li>
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-book"></i>
+                <span>AFFECTATIONS</span>
+                <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+                <li><a href="{{ path('castor_admin_config_matieres') }}"><i class="fa fa-circle-o"></i>Configuration des Matieres</a> </li>
+                <li><a href="{{ path('castor_admin_inscription_eleves') }}"><i class="fa fa-circle-o"></i> Repartitions des Enseignants</a></li>
+
+            </ul>
+        </li>
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-book"></i>
+                <span>ELEVES</span>
+                <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+                <li><a href="{{ path('castor_admin_classes') }}"><i class="fa fa-circle-o"></i> Listing</a> </li>
+                <li><a href="{{ path('castor_admin_inscription_eleves') }}"><i class="fa fa-circle-o"></i> Fiche Eleve</a></li>
+                <li><a href="{{ path('castor_admin_inscription_eleves') }}"><i class="fa fa-circle-o"></i> Gestion des certificats</a></li>
+                <li><a href="{{ path('castor_admin_classes') }}"><i class="fa fa-circle-o"></i> Carnet de notes</a> </li>
+
+
+            </ul>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-calendar"></i>
+                <span>EMPLOI DU TEMPS</span>
+            </a>
+        </li>
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-edit "></i>
+                <span>SAISIES</span>
+                <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+                <li><a href=""><i class="fa fa-circle-o"></i> Notes</a> </li>
+                <li><a href=""><i class="fa fa-circle-o"></i> Absences</a></li>
+            </ul>
+        </li>
+
+
+
+
+
+    </ul>
+</section>
+<!-- /.sidebar -->

@@ -1,0 +1,344 @@
+<!doctype html>
+<!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-gb" class="no-js"> <!--<![endif]-->
+
+<head>
+    <title>{% block title %} {% endblock %} > Lycee les Castors</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- this styles only adds some repairs on idevices  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google fonts - witch you want to use - (rest you can just remove) -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- ######### CSS STYLES ######### -->
+
+    <link rel="stylesheet" href="{{ asset('front/css/reset.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('front/css/style.css') }}" type="text/css" />
+
+    <link rel="stylesheet" href="{{ asset('front/css/font-awesome/css/font-awesome.min.css') }}">
+
+    <!-- responsive devices styles->
+    <link rel="stylesheet" media="screen" href="{{ asset('front/css/responsive-leyouts.css') }}" type="text/css" />
+ -
+    <!-- animations -->
+    <link href="{{ asset('front/js/animations/css/animations.min.css') }}" rel="stylesheet" type="text/css" media="all" />
+
+    <!-- just remove the below comments witch color skin you want to use -->
+    <!--<link rel="stylesheet" href="css/colors/red.css" />-->
+    <!--<link rel="stylesheet" href="css/colors/green.css" />-->
+    <!--<link rel="stylesheet" href="css/colors/cyan.css" />-->
+    <link rel="stylesheet" href="css/colors/orange.css" />
+    <!--<link rel="stylesheet" href="css/colors/lightblue.css" />-->
+    <!--<link rel="stylesheet" href="css/colors/pink.css" />-->
+    <!--<link rel="stylesheet" href="css/colors/purple.css" />-->
+    <!--<link rel="stylesheet" href="css/colors/bridge.css" />-->
+    <!--<link rel="stylesheet" href="css/colors/slate.css" />-->
+    <!--<link rel="stylesheet" href="css/colors/yellow.css" />-->
+    <!--<link rel="stylesheet" href="css/colors/darkred.css" />-->
+
+    <!-- just remove the below comments witch bg patterns you want to use -->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-default.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-one.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-two.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-three.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-four.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-five.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-six.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-seven.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-eight.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-nine.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-ten.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-eleven.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-twelve.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-thirteen.css" />-->
+
+    <!-- mega menu -->
+    <link href="{{ asset('front/js/mainmenu/sticky.css') }}" rel="stylesheet">
+    <link href="{{ asset('front/js/mainmenu/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('front/js/mainmenu/demo.css') }}" rel="stylesheet">
+    <link href="{{ asset('front/js/mainmenu/menu.css') }}" rel="stylesheet">
+    <!-- forms -->
+    <link rel="stylesheet" href="{{ asset('front/js/form/sky-forms.css') }}" type="text/css" media="all">
+
+       <!-- slide panel -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('front/js/slidepanel/slidepanel.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/js/progressbar/ui.progress-bar.css') }}">
+    <!-- Master Slider -->
+    <link rel="stylesheet" href="{{ asset('front/js/masterslider/style/masterslider.css') }}" />
+    <link rel="stylesheet" href="{{ asset('front/js/masterslider/skins/default/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('front/js/masterslider/style.css') }}" />
+
+    <!-- cubeportfolio -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('front/js/cubeportfolio/cubeportfolio.min.css') }}">
+
+    <!-- tabs -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('front/js/tabs/assets/css/responsive-tabs.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('front/js/tabs/assets/css/responsive-tabs2.css') }}">
+
+    <!-- carousel -->
+    <link rel="stylesheet" href="{{ asset('front/js/carousel/flexslider.css') }}" type="text/css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('front/js/carousel/skin.css') }}" />
+
+    <!-- progressbar -->
+    <link rel="stylesheet" href="{{ asset('front/js/progressbar/ui.progress-bar.css') }}">
+
+    <!-- accordion -->
+    <link rel="stylesheet" href="{{ asset('front/js/accordion/accordion.css') }}" type="text/css" media="all">
+
+    <!-- Lightbox -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('front/js/lightbox/jquery.fancybox.css') }}" media="screen" />
+
+    <script type="text/javascript" src="{{ asset('front/js/universal/jquery.js') }}"></script>
+
+    <script src="{{ asset('front/js/classyloader/jquery.classyloader.min.js') }}"></script>
+
+
+</head>
+
+<body>
+
+
+<div class="site_wrapper">
+        {% include('includes/sliderWrap.html.twig') %}
+
+
+    <div class="clearfix"></div>
+
+    <header id="header">
+
+        <!-- Top header bar -->
+        <div id="topHeader">
+
+            <div class="wrapper">
+
+                {% include('includes/top_nav.html.twig') %}
+
+
+            </div>
+
+        </div><!-- end top navigation -->
+
+
+        <div id="trueHeader">
+
+            <div class="wrapper">
+
+                <div class="container">
+
+                    <!-- Logo -->
+                    <div class="logo"><a href="{{ path('castor_front_homepage1') }}" id="logo"></a></div>
+
+                    {% include('includes/menu.html.twig') %}
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <div class="clearfix"></div>
+
+    <!-- Slider
+    ======================================= -->
+
+    <div class="container_full">
+        {% block content %}
+        {% endblock %}
+
+    <div class="clearfix"></div>
+
+        {% include('includes/footer.html.twig') %}
+
+
+    </div>
+
+
+<!-- ######### JS FILES ######### -->
+<!-- get jQuery from the google apis -->
+<script type="text/javascript" src="{{ asset('front/js/universal/jquery.js') }}"></script>
+
+<!-- style switcher -->
+<script src="{{ asset('front/js/style-switcher/jquery-1.js') }}"></script>
+<script src="{{ asset('front/js/style-switcher/styleselector.js') }}"></script>
+
+<!-- animations -->
+<script src="{{ asset('front/js/animations/js/animations.min.js') }}" type="text/javascript"></script>
+
+    <!-- jquery jcarousel -->
+    <script type="text/javascript" src="{{ asset('front/js/carousel/jquery.jcarousel.min.js') }}"></script>
+
+
+    <!-- slide panel -->
+<script type="text/javascript" src="{{ asset('front/js/slidepanel/slidepanel.js') }}"></script>
+
+<!-- Master Slider -->
+<script src="{{ asset('front/js/masterslider/jquery.easing.min.js') }}"></script>
+<script src="{{ asset('front/js/masterslider/masterslider.min.js') }}"></script>
+<script type="text/javascript">
+    (function($) {
+        "use strict";
+
+        var slider = new MasterSlider();
+        slider.setup('masterslider' , {
+            width: 1400,    // slider standard width
+            height:580,   // slider standard height
+            space:0,
+            speed:45,
+            fullwidth:true,
+            loop:true,
+            preload:0,
+            autoplay:true,
+            view:"basic"
+        });
+// adds Arrows navigation control to the slider.
+        slider.control('arrows');
+        slider.control('bullets');
+
+    })(jQuery);
+</script>
+
+<!-- mega menu -->
+<script src="{{ asset('front/js/mainmenu/bootstrap.min.js') }}"></script>
+<script src="{{ asset('front/js/mainmenu/customeUI.js') }}"></script>
+
+
+<!-- scroll up -->
+<script src="{{ asset('front/js/scrolltotop/totop.js') }}" type="text/javascript"></script>
+
+<!-- tabs -->
+<script src="{{ asset('front/js/tabs/assets/js/responsive-tabs.min.js') }}" type="text/javascript"></script>
+
+
+<!-- jquery jcarousel -->
+<script type="text/javascript">
+    (function($) {
+        "use strict";
+
+        jQuery(document).ready(function() {
+            jQuery('#mycarouselthree').jcarousel();
+        });
+
+    })(jQuery);
+</script>
+
+
+<!-- accordion -->
+<script type="text/javascript" src="{{ asset('front/js/accordion/custom.js') }}"></script>
+
+<!-- sticky menu -->
+<script type="text/javascript" src="{{ asset('front/js/mainmenu/sticky.js') }}"></script>
+<script type="text/javascript" src="{{ asset('front/js/mainmenu/modernizr.custom.75180.js') }}"></script>
+
+
+    <!-- cubeportfolio -->
+<script type="text/javascript" src="{{ asset('front/js/cubeportfolio/jquery.cubeportfolio.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('front/js/cubeportfolio/main.js') }}"></script>
+<script type="text/javascript" src="{{ asset('front/js/cubeportfolio/main5.js') }}"></script>
+<script type="text/javascript" src="{{ asset('front/js/cubeportfolio/main6.js') }}"></script>
+
+<script src="{{ asset('front/js/form/jquery.form.min.js') }}"></script>
+<script src="{{ asset('front/js/form/jquery.validate.min.js') }}"></script>
+<script type="text/javascript">
+    (function($) {
+        "use strict";
+
+        $(function()
+        {
+            // Validation
+            $("#sky-form").validate(
+                    {
+                        // Rules for form validation
+                        rules:
+                        {
+                            name:
+                            {
+                                required: true
+                            },
+                            email:
+                            {
+                                required: true,
+                                email: true
+                            },
+                            message:
+                            {
+                                required: true,
+                                minlength: 10
+                            }
+                        },
+
+                        // Messages for form validation
+                        messages:
+                        {
+                            name:
+                            {
+                                required: 'Please enter your name',
+                            },
+                            email:
+                            {
+                                required: 'Please enter your email address',
+                                email: 'Please enter a VALID email address'
+                            },
+                            message:
+                            {
+                                required: 'Please enter your message'
+                            }
+                        },
+
+                        // Ajax form submition
+                        submitHandler: function(form)
+                        {
+                            $(form).ajaxSubmit(
+                                    {
+                                        success: function()
+                                        {
+                                            $("#sky-form").addClass('submited');
+                                        }
+                                    });
+                        },
+
+                        // Do not change code below
+                        errorPlacement: function(error, element)
+                        {
+                            error.insertAfter(element.parent());
+                        }
+                    });
+        });
+
+    })(jQuery);
+</script>
+<!-- carousel -->
+<script defer src="{{ asset('front/js/carousel/jquery.flexslider.js') }}"></script>
+<script defer src="{{ asset('front/js/carousel/custom.js') }}"></script>
+<!-- sticky menu -->
+<script type="text/javascript" src="{{ asset('front/js/mainmenu/sticky.js') }}"></script>
+<script type="text/javascript" src="{{ asset('front/js/mainmenu/modernizr.custom.75180.js') }}"></script>
+
+    <!-- progress bar -->
+
+
+<!-- lightbox -->
+<script type="text/javascript" src="{{ asset('front/js/lightbox/jquery.fancybox.js') }}"></script>
+<script type="text/javascript" src="{{ asset('front/js/lightbox/custom.js') }}"></script>
+
+
+</body>
+</html>

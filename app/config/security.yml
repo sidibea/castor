@@ -1,0 +1,39 @@
+# app/config/security.yml
+
+security:
+    encoders:
+        CASTOR\AdminBundle\Entity\Users: sha512
+
+    providers:
+        main:
+            id: fos_user.user_provider.username
+    # http://symfony.com/doc/current/book/security.html#hierarchical-roles
+    role_hierarchy:
+        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+
+    # the main part of the security, where you can set up firewalls
+    # for specific sections of your app
+    firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern:  ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            pattern:        ^/
+            anonymous:      true
+            provider:       main
+            form_login:
+                login_path: fos_user_security_login
+                check_path: /login_check
+            logout:
+                path:       /logout
+                target:     /
+            remember_me:
+                key:        %secret%
+                lifetime:   3650000  # with these settings you can restrict or allow access for different parts
+    # of your application based on roles, ip, host or methods
+    # http://symfony.com/doc/current/cookbook/security/access_control.html
+    access_control:
+        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin1502/$, roles: ROLE_ADMIN }
+

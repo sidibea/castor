@@ -1,0 +1,21 @@
+castor_admin:
+    resource: "@CASTORAdminBundle/Resources/config/routing.yml"
+    prefix:   /admin1502
+
+castor_front:
+    resource: "@CASTORFrontBundle/Resources/config/routing.yml"
+    prefix:   /
+
+login:
+    pattern:   /login
+    defaults:  { _controller: CASTORAdminBundle:Security:login }
+
+login_check:
+    pattern:   /login_check
+
+logout:
+    pattern:   /logout
+
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+
